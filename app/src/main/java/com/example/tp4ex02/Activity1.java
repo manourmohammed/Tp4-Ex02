@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class Activity1 extends AppCompatActivity {
     Button btn1,btn2,btn3;
     EditText ed1;
@@ -49,13 +51,30 @@ public class Activity1 extends AppCompatActivity {
             @SuppressLint("DefaultLocale")
             @Override
             public void onClick(View v) {
-                int Number = Integer.parseInt(ed1.getText().toString());
-                StringBuilder s= new StringBuilder();
-                for (int i=1;i<=9;i++) {
-                    int result= Number*i;
-                    s.append(String.format(" %d*%d=%d \n", Number, i, result));
+
+                if (ed1.getText().toString().isEmpty()){
+                    text.setText(
+                                      "?*0=?" +
+                                    "\n?*1=?" +
+                                    "\n?*2=?" +
+                                    "\n?*3=?" +
+                                    "\n?*4=?" +
+                                    "\n?*5=?" +
+                                    "\n?*6=?" +
+                                    "\n?*7=?" +
+                                    "\n?*8=?" +
+                                    "\n?*9=?");
+                    Snackbar.make(btn2,"veuillez saiser un entier",Snackbar.LENGTH_SHORT).show();
                 }
-                text.setText(s.toString());
+                else {
+                    int Number = Integer.parseInt(ed1.getText().toString());
+                    StringBuilder s= new StringBuilder();
+                    for (int i=1;i<=9;i++) {
+                        int result= Number*i;
+                        s.append(String.format(" %d*%d=%d \n", Number, i, result));
+                    }
+                    text.setText(s.toString());
+                }
             }
         });
 
