@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity1">
@@ -25,8 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/white"
-             />
+            android:background="@color/white" />
 
         <Button
             android:id="@+id/pink"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
 
-            android:background="#6A98315F"/>
+            android:background="#6A98315F" />
 
         <Button
             android:id="@+id/purple"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
 
-            android:background="#B2602180"/>
+            android:background="#B2602180" />
     </LinearLayout>
 
     <EditText

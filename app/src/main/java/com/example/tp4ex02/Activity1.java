@@ -1,8 +1,10 @@
 package com.example.tp4ex02;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +14,8 @@ import android.widget.TextView;
 public class Activity1 extends AppCompatActivity {
     Button btn1,btn2,btn3;
     EditText ed1;
-    TextView Text;
+    Button white,pink,purple;
+    ConstraintLayout layout;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -23,6 +26,15 @@ public class Activity1 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         ed1=findViewById(R.id.ed_number);
+        white=findViewById(R.id.white);
+        pink=findViewById(R.id.pink);
+        purple=findViewById(R.id.purple);
+        layout=findViewById(R.id.layout);
+
+        white.setOnClickListener(v -> layout.setBackgroundColor(Color.WHITE));
+        pink.setOnClickListener(v -> layout.setBackgroundColor(0x6A98315F));
+        purple.setOnClickListener(v -> layout.setBackgroundColor(0xB2602180));
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
