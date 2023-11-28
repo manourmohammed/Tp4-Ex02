@@ -1,8 +1,8 @@
 # Table de Multiplication
 
-cette application `Android` est concue pou vou permettre d'apprendre **la table de multiplication**.  
+Cette application `Android` est concue pou vou permettre d'apprendre **la table de multiplication**.  
 
-Fonctionnalites:  
+## Fonctionnalites:  
 
 - [x] Affichage de la table de multiplication du nombre saisi.  
 - [ ] Mode "Test":Gneration des operations(de multiplication) aleatoires dont il faut deduire le resultat.  
