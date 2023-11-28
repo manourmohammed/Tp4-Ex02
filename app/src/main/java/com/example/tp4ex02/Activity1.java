@@ -8,11 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Activity1 extends AppCompatActivity {
     Button btn1,btn2,btn3;
     EditText ed1;
-    TextView Text;
+    TextView text;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -23,14 +24,32 @@ public class Activity1 extends AppCompatActivity {
         btn2=findViewById(R.id.btn_2);
         btn3=findViewById(R.id.btn_3);
         ed1=findViewById(R.id.ed_number);
+        text=findViewById(R.id.text);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ed1.setText(null);
+                text.setText(
+                        "?*0=?" +
+                        "\n?*1=?" +
+                        "\n?*2=?" +
+                        "\n?*3=?" +
+                        "\n?*4=?" +
+                        "\n?*5=?" +
+                        "\n?*6=?" +
+                        "\n?*7=?" +
+                        "\n?*8=?" +
+                        "\n?*9=?");
+                if (ed1.getText().toString().isEmpty()){
+                    Toast.makeText(Activity1.this, "vide", Toast.LENGTH_SHORT).show();
+                }
 
-            }
+
+           }
+
         });
+
 
 
         btn3.setOnClickListener(v -> {
